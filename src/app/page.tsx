@@ -16,9 +16,9 @@ export default function Home() {
 // function
 
 const addItem = ()=>{
-  let obj:any = todos.find(item => item.id == id)
+  const obj:any = todos.find(item => item.id == id)
   if (obj){
-    let newArray = todos.filter(item => item.id !== obj.id)
+    const newArray = todos.filter(item => item.id !== obj.id)
     setTodos([...newArray,{movie:Inputval,id:id}])
     setInput ("")
     setId(0)
@@ -31,14 +31,14 @@ const addItem = ()=>{
 };
 
 const editItem=(id:any)=>{
-  let obj:any = todos.find(item => item.id == id)
+  const obj:any = todos.find(item => item.id == id)
   setInput(obj.movie)
   setId(obj.id)
   };
 
   const delItem = (id:any)=>{
 
-    let newArray = todos.filter(item => item.id !== id)
+    const newArray = todos.filter(item => item.id !== id)
     
     setTodos([...newArray])
 
